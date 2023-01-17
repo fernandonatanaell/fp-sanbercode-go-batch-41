@@ -5,7 +5,7 @@ CREATE TABLE menu (
     menu_id SERIAL PRIMARY KEY,
     menu_name VARCHAR(256) NOT NULL,
     menu_description VARCHAR(256) NOT NULL,
-    menu_price VARCHAR(256) NOT NULL,
+    menu_price INT NOT NULL,
     created_at TIMESTAMP,
     updated_at TIMESTAMP,
     deleted_at TIMESTAMP
