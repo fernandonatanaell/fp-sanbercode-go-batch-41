@@ -22,7 +22,13 @@ func AuthCheckout() gin.HandlerFunc {
 			return
 		}
 
-		if order.HtransStatus == 0 {
+		if order.OrderId == "" {
+			c.JSON(http.StatusUnauthorized, gin.H{
+				"message": "Order not found!",
+			})
+			c.Abort()
+			return
+		} else if order.HtransStatus == 0 {
 			c.JSON(http.StatusUnauthorized, gin.H{
 				"message": "This order isn't finished yet!",
 			})
