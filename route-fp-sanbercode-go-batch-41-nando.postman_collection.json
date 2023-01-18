@@ -1,0 +1,612 @@
+{
+	"info": {
+		"_postman_id": "f78c345f-afb9-4c44-a701-4ae8fd4f1fde",
+		"name": "route-fp-sanbercode-go-batch-41-nando",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24524579"
+	},
+	"item": [
+		{
+			"name": "ALL USER",
+			"item": [
+				{
+					"name": "GET ALL MENU",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/menu",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH MENU BY NAME",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/menu/search?menu_name=PANGSIT",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"menu",
+								"search"
+							],
+							"query": [
+								{
+									"key": "menu_name",
+									"value": "PANGSIT"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ADMIN",
+			"item": [
+				{
+					"name": "SHOW ALL ORDER USERS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "nimda",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/admin/order",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"admin",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE NEW ORDER",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "nimda",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/admin/order",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"admin",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET DETAIL ORDER FROM ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "nimda",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/admin/order/detail?order_id=20230118034855",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"admin",
+								"order",
+								"detail"
+							],
+							"query": [
+								{
+									"key": "order_id",
+									"value": "20230118034855"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL MENU (TRASHED)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "nimda",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/admin/menu",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"admin",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE NEW MENU",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "nimda",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"menu_name\": \"Ayam bakar\",\r\n    \"menu_description\": \"Deskripsi dariayam bakar\",\r\n    \"menu_price\": 24000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/admin/menu",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"admin",
+								"menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE MENU",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "nimda",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"menu_name\": \"Nasi padang\",\r\n    \"menu_description\": \"Deskripsi dari nasi padang\",\r\n    \"menu_price\": 18000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/admin/menu?menu_id=3",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"admin",
+								"menu"
+							],
+							"query": [
+								{
+									"key": "menu_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE MENU (SOFT DELETE)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "nimda",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/admin/menu?menu_id=3",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"admin",
+								"menu"
+							],
+							"query": [
+								{
+									"key": "menu_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CUSTOMER",
+			"item": [
+				{
+					"name": "SHOW USER CART",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "20230118034855",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/customer/order",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"customer",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "INSERT ORDER TO CART",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "20230118034855",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"menu_id\": 4,\r\n    \"cart_quantity\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/customer/order/insert",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"customer",
+								"order",
+								"insert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE/DELETE IN CART",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "20230118034855",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"menu_id\": 1,\r\n    \"cart_quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/customer/order/delete",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"customer",
+								"order",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CLEAR USER CART",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "20230118034855",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/customer/order/clear",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"customer",
+								"order",
+								"clear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SUBMIT ORDER (CHECKOUT)",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "20230118034855",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/customer/checkout",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"customer",
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SHOW DETAIL CHECKOUT",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "20230118034855",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://fp-sanbercode-go-batch-41-production.up.railway.app/checkout",
+							"protocol": "https",
+							"host": [
+								"fp-sanbercode-go-batch-41-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"checkout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
