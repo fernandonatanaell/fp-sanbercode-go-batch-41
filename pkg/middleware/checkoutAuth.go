@@ -11,10 +11,16 @@ import (
 // Middleware untuk check apakah customer sudah melakukan checkout atau belum
 func AuthCheckout() gin.HandlerFunc {
 	return func(c *gin.Context) {
-		AuthCustomer()
+		username, _, ok := c.Request.BasicAuth()
+		order, err := repository.GetOrder(database.DBConnection, username)
 
-		username, _, _ := c.Request.BasicAuth()
-		order, _ := repository.GetOrder(database.DBConnection, username)
+		if !ok || err != nil {
+			c.JSON(http.StatusUnauthorized, gin.H{
+				"message": "Unauthorized",
+			})
+			c.Abort()
+			return
+		}
 
 		if order.HtransStatus == 0 {
 			c.JSON(http.StatusUnauthorized, gin.H{
